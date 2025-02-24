@@ -128,9 +128,9 @@ const Dashboard = ({id}) => {
                               <hr></hr>
                               <div >
                                 <Button style={{fontWeight:"bold",backgroundColor:"#ff7146",color:"white",padding:"15px"}}><IoStarSharp size={30} color='white'/>Rewards</Button>
-                                <Button style={{fontWeight:"bold",backgroundColor:"#ff7146",color:"white",marginLeft:"15px",padding:"15px"}} onClick={e=>copyLink(`https://donation-backend-ten.vercel.app/${x.link}`)}><FaRegCopy size={30} color='white'/>Copy Donation Link</Button>
+                                <Button style={{fontWeight:"bold",backgroundColor:"#ff7146",color:"white",marginLeft:"15px",padding:"15px"}} onClick={e=>copyLink(`https://donation-frontend-six.vercel.app/${x.link}`)}><FaRegCopy size={30} color='white'/>Copy Donation Link</Button>
                                 <WhatsappShareButton
-                                    url={`https://donation-backend-ten.vercel.app/${x.link}`} // Ensure the URL is passed
+                                    url={`https://donation-frontend-six.vercel.app/${x.link}`} // Ensure the URL is passed
                                     title={message} // Optional: Use a custom message
                                     separator=" " // Optional: to separate the title from the URL in the message
                                   >
