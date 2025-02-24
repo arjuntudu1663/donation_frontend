@@ -98,48 +98,50 @@ const LinkHome = () => {
     <>
     <div style={{width:"100%",display:"grid",placeItems:"center"}}>
         
-        <div style={{width:"30%",display:"flex",marginTop:"10%"}}>
+        <Container style={{display:"flex",marginTop:"10%"}}>
          <Button variant='contained' color='error' onClick={e=>window.location.href="/"}>Back</Button>
-        </div>
+        </Container>
          <p></p>
-        <Card style={{width:"30%"}}>
+        <Container style={{}}>
+                         <Card>
                          <Card.Header style={{fontWeight:"bold",backgroundColor:"white",color:"#ff7146"}}>
                           
-                           <div>
-                              <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                                
-                              <p style={{fontSize:"25px"}}> {x.name}</p>
-                              <p></p>
-                              </div>
+                          <div>
+                             <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                               
+                             <p style={{fontSize:"25px"}}> {x.name}</p>
+                             <p></p>
+                             </div>
+                        <p></p>
+                         <Paper elevation={5} style={{display:"",padding:"15px",justifyContent:"space-between",alignItems:"center"}}>
+                        <div style={{display:"flex",justifyContent:"space-between"}}>
+                        Target Amount :  <h4 style={{color:"#ff7146"}}>{x.targetAmount}</h4>
+                        </div>
                          <p></p>
-                          <Paper elevation={5} style={{display:"",padding:"15px",justifyContent:"space-between",alignItems:"center"}}>
-                         <div style={{display:"flex",justifyContent:"space-between"}}>
-                         Target Amount :  <h4 style={{color:"#ff7146"}}>{x.targetAmount}</h4>
+                         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                         progress completed :   <CircularProgress  size="lg" determinate value={x.progress}>
+                                                        <Typography>{parseInt(x.progress)}%</Typography>
+                                                 </CircularProgress> 
                          </div>
-                          <p></p>
-                          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                          progress completed :   <CircularProgress  size="lg" determinate value={x.progress}>
-                                                         <Typography>{parseInt(x.progress)}%</Typography>
-                                                  </CircularProgress> 
+                         </Paper>
                           </div>
-                          </Paper>
-                           </div>
-                         <p></p>
-                         </Card.Header>
+                        <p></p>
+                        </Card.Header>
+                     
                       
-                       
-                       <Card.Body style={{backgroundColor:"#ff7146",color:"white"}}>
-                            <h1>Donate Towards Child's Education for {x.months}</h1>
-                       </Card.Body>
+                      <Card.Body style={{backgroundColor:"#ff7146",color:"white"}}>
+                           <h1>Donate Towards Child's Education for {x.months}</h1>
+                      </Card.Body>
 
-                      <Card.Footer style={{padding:"15px"}}>
-                        <Button onClick={(e)=>{
-                          setDonateFormModal(true)
-                          setCurrDonationId(x.id)
-                        }} style={{padding:"15px",borderRadius:"40px",backgroundColor:"#ff7146",color:"white",fontWeight:"bold"}}>Donate</Button>
-                        <Button variant='outlined' style={{padding:"15px",borderRadius:"40px",backgroundColor:"white",color:"#ff7146",fontWeight:"bold",marginLeft:"15px",borderColor:"#ff7146"}}>view more</Button>
-                      </Card.Footer>
-       </Card>
+                     <Card.Footer style={{padding:"15px"}}>
+                       <Button onClick={(e)=>{
+                         setDonateFormModal(true)
+                         setCurrDonationId(x.id)
+                       }} style={{padding:"15px",borderRadius:"40px",backgroundColor:"#ff7146",color:"white",fontWeight:"bold"}}>Donate</Button>
+                       <Button variant='outlined' style={{padding:"15px",borderRadius:"40px",backgroundColor:"white",color:"#ff7146",fontWeight:"bold",marginLeft:"15px",borderColor:"#ff7146"}}>view more</Button>
+                     </Card.Footer>
+                         </Card>
+       </Container>
         
         
         </div>
